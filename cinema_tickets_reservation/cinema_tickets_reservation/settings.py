@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -75,10 +76,16 @@ WSGI_APPLICATION = 'cinema_tickets_reservation.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'djongo',
+        'NAME': 'yacine',
+        'CLIENT': {
+            'host': 'mongodb+srv://sifyacine:uc3dWypmwiuqMk5U@cluster0.560glgt.mongodb.net/',
+            'username': 'sifyacine',
+            'password': 'uc3dWypmwiuqMk5U',
+        },
+    },
 }
+
 
 
 # Password validation
